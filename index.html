@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahesh Borkar | Portfolio</title>
+  <style>
+    body {margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:#0d0d0d;color:#fff;}
+    header {padding:1rem 0;position:sticky;top:0;background:rgba(13,13,13,.85);backdrop-filter:blur(6px);z-index:10}
+    .nav-bar{display:flex;align-items:center;justify-content:space-between;width:90%;margin:auto}
+    .nav-links{list-style:none;display:flex;gap:1.5rem}
+    .nav-links a{color:#fff;text-decoration:none;position:relative}
+    .nav-links a.active::after,.nav-links a:hover::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:#9b59b6}
+    .hero{min-height:calc(100vh - 72px);display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem 1rem}
+    .hero img{width:220px;height:220px;border-radius:50%;border:5px solid #9b59b6;box-shadow:0 0 20px rgba(155,89,182,.6)}
+    .hero h1 span{color:#9b59b6}
+    .btn{padding:.7rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;margin:.5rem;display:inline-block;transition:.3s}
+    .btn-primary{background:#9b59b6;color:#fff}.btn-primary:hover{background:#b573d2}
+    .btn-secondary{border:2px solid #fff;color:#fff}.btn-secondary:hover{background:#fff;color:#0d0d0d}
+    .about-section{padding:4rem 1rem;text-align:center}
+    .about-wrapper{display:flex;flex-direction:column;align-items:center;gap:1rem}
+    .about-photo{width:180px;height:180px;border-radius:50%;border:4px solid #9b59b6;object-fit:cover}
+    .about-info-grid{margin-top:1rem;display:flex;flex-direction:column;gap:.5rem;text-align:left}
+    .skills-section,.resume-section,.case-studies-section,.contact-section{padding:4rem 1rem;text-align:center}
+    h2{color:#9b59b6;margin-bottom:1.5rem}
+    .timeline{position:relative;margin:2rem auto;max-width:800px}
+    .timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;background:#9b59b6;transform:translateX(-50%)}
+    .timeline-item{width:50%;padding:1rem;position:relative;opacity:0;transform:translateY(40px);transition:.8s}
+    .timeline-item.left{text-align:right;left:0}.timeline-item.right{text-align:left;left:50%}
+    .timeline-dot{position:absolute;top:20px;width:18px;height:18px;background:#9b59b6;border-radius:50%;border:3px solid #fff;z-index:2}
+    .timeline-item.left .timeline-dot{right:-9px}.timeline-item.right .timeline-dot{left:-9px}
+    .timeline-content{background:rgba(255,255,255,.05);padding:1rem;border-radius:10px;box-shadow:0 0 10px rgba(155,89,182,.3)}
+    .timeline-content h3{color:#9b59b6;margin-bottom:.5rem}
+    .timeline-item.visible{opacity:1;transform:translateY(0)}
+    .contact-section{padding:4rem 1rem;text-align:center}
+    .contact-details{display:flex;justify-content:center;gap:2rem;margin:1rem 0;flex-wrap:wrap}
+    .contact-details div{background:rgba(255,255,255,.05);padding:1rem 1.5rem;border-radius:8px;position:relative}
+    .copy-btn{display:none;position:absolute;top:8px;right:8px;background:#000;color:#9b59b6;border:none;padding:.3rem .6rem;cursor:pointer;border-radius:5px}
+    .contact-details div:hover .copy-btn{display:block}
+    .find-me{margin-top:2rem}
+    .find-me a{margin:0 .7rem;color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;transition:.3s}
+    .find-me a:hover{color:#9b59b6}
+    .contact-form{display:none;margin-top:2rem;text-align:left;max-width:500px;margin:auto}
+    .contact-form input,.contact-form textarea{width:100%;padding:.6rem;margin:.5rem 0;border-radius:6px;border:none}
+    .contact-form button{background:#9b59b6;color:#fff;border:none;padding:.7rem 1.2rem;cursor:pointer;border-radius:6px}
+    .contact-form button:hover{background:#b573d2}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="nav-bar">
+    <div class="logo">Mahesh</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<section class="hero">
+  <div>
+    <img src="Mahesh Photo.png" alt="Mahesh Photo">
+    <h1>Hi, I'm <span>Mahesh Borkar</span></h1>
+    <a href="#contact" class="btn btn-primary">Hire Me</a>
+    <a href="Mahesh_Borkar_Resume.pdf" download class="btn btn-secondary">Download CV</a>
+  </div>
+</section>
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <div class="about-wrapper">
+    <img src="Mahesh Photo.png" alt="Mahesh Photo" class="about-photo">
+    <div class="about-info-grid">
+      <div><b>Profile:</b> Business Growth Specialist</div>
+      <div><b>Domain:</b> Off-Highway, Automotive, Rail, Mobility</div>
+      <div><b>Education:</b> Masters in Management Studies (Marketing)</div>
+      <div><b>Languages:</b> English, Hindi, Marathi</div>
+      <div><b>Interests:</b> Travelling</div>
+    </div>
+  </div>
+</section>
+<section id="skills" class="skills-section">
+  <h2>Skills & Tools</h2>
+  <p>Professional skills, tools & technologies will go here.</p>
+</section>
+<section id="resume" class="resume-section">
+  <h2>My Resume</h2>
+  <div class="timeline">
+    <div class="timeline-item left fade-up">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Business Growth Partner</h3>
+        <p>Creative Synergies Group | Dec 2023 - Present | Bengaluru, India (Hybrid)</p>
+        <ul><li>Led market expansion across Europe and the USA</li><li>Secured 63 meetings including 15 qualified</li><li>Delivered digital engineering solutions for Fortune 500</li></ul>
+      </div>
+    </div>
+    <div class="timeline-item right fade-up">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Business Development Executive</h3>
+        <p>Alptech Software Solutions LLP | Dec 2022 - May 2023 | Pune, India</p>
+      </div>
+    </div>
+    <div class="timeline-item left fade-up">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Business Development Officer</h3>
+        <p>Transport Corporation of India | Oct 2021 - Sep 2022 | Gurugram, India</p>
+      </div>
+    </div>
+    <div class="timeline-item right fade-up">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Education</h3>
+        <p>MMS (Marketing) – MET, Mumbai | 2019 – 2021</p>
+        <p>B.Tech Chemical Engg – COET Akola | 2013 – 2018</p>
+      </div>
+    </div>
+    <div class="timeline-item left fade-up">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Certifications</h3>
+        <p>HubSpot, LinkedIn, Google Digital, Power BI etc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="case-studies" class="case-studies-section">
+  <h2>Case Studies</h2>
+  <p>Work in Off-Highway, Rail, Mobility and more...</p>
+</section>
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <div class="contact-details">
+    <div>📍 Bengaluru, India</div>
+    <div>📞 +91 7768042446</div>
+    <div>✉️ <span id="email-text">maheshborkarmet@gmail.com</span><button class="copy-btn" onclick="copyEmail()">Copy</button></div>
+    <div><a href="Mahesh_Borkar_Resume.pdf" download class="btn btn-primary">Download Resume</a></div>
+  </div>
+  <h3>Have a question?</h3>
+  <button id="clickHereBtn" class="btn btn-primary">Click Here</button>
+  <form id="contactForm" class="contact-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="text" id="subject" placeholder="Subject" required>
+    <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <div class="find-me">
+    <p>Find me on:</p>
+    <a href="https://linkedin.com/in/mahesh-borkar" target="_blank">🔗 LinkedIn</a>
+    <a href="https://x.com/maheshborkar123" target="_blank">🐦 Twitter</a>
+    <a href="https://instagram.com/mahesh_._borkar" target="_blank">📸 Instagram</a>
+  </div>
+</section>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',e=>{e.preventDefault();document.querySelector(anchor.getAttribute('href')).scrollIntoView({behavior:"smooth"})})});
+  const items=document.querySelectorAll('.timeline-item');const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.2});items.forEach(el=>io.observe(el));
+  function copyEmail(){const text=document.getElementById('email-text').textContent;navigator.clipboard.writeText(text);alert('Email copied: '+text)}
+  document.getElementById('clickHereBtn').addEventListener('click',()=>{document.getElementById('contactForm').style.display='block'});
+  (function(){emailjs.init({publicKey:"mIz9e3YoOtREdhRwm"});})();
+  document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();emailjs.send("service_rw7ner2","template_l3mmhvb",{from_name:document.getElementById('name').value,from_email:document.getElementById('email').value,subject:document.getElementById('subject').value,message:document.getElementById('message').value}).then(()=>{alert("Message sent!");document.getElementById('contactForm').reset();}).catch(err=>alert("Failed: "+JSON.stringify(err)))});
+</script>
+</body>
+</html>
